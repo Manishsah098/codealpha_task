@@ -1,5 +1,6 @@
 ✅
 TASK 1: Simple URL Shortener 
+
 ● Create a backend server using Flask (Python) or Express.js (Node.js).
 
 ● Build an API endpoint to accept long URLs and generate a unique short code. 
