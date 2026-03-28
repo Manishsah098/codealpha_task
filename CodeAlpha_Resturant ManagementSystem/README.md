@@ -1,6 +1,6 @@
-# Restaurant Management System (RMS Pro)
+# Restaurant Management System 
 
-RMS Pro is a sophisticated, full-stack digital platform designed to bridge the gap between customer ordering convenience and backend administrative efficiency. Built with a premium glassmorphism interface and a robust Django REST backend, it streamlines restaurant operations from the dining table to the kitchen.
+Manish Resturant is a sophisticated, full-stack digital platform designed to bridge the gap between customer ordering convenience and backend administrative efficiency. Built with a premium glassmorphism interface and a robust Django REST backend, it streamlines restaurant operations from the dining table to the kitchen.
 
 ## 📖 Project Specification
 
