@@ -1,4 +1,4 @@
-# EventHub - Premium Event Registration System
+# EventHub -  Event Registration System
 
 EventHub is a modern, full-stack event management platform built with Django and React. It features a stunning glassmorphism UI, secure token-based authentication, and a seamless registration experience.
 
