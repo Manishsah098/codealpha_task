@@ -28,8 +28,8 @@ TASK 1: Simple URL Shortener
 ● Optional: Add reporting features (e.g., daily sales, stock alerts) and admin access panel.
 
 
-✅
-TASK 3: Event Registration System 
+✅TASK 3: Event Registration System 
+
 ● Set up backend using Django or Express.js to manage routes and logic. 
 
 ● Create models for events and user registrations in your database like PostgreSQL
