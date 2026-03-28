@@ -13,7 +13,9 @@ TASK 1: Simple URL Shortener
 
 
 
-✅TASK 3: Restaurant Management System 
+
+
+✅TASK 2: Restaurant Management System 
 
 ● Set up backend using Django or Express.js to handle restaurant operations (orders, tables, inventory). 
 
