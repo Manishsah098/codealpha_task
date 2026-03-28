@@ -1,0 +1,113 @@
+<!-- urlshort/templates/urlshort/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>URL Shortener</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+
+    /* Attractive Gradient Background */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height:100vh;
+}
+
+.container{
+    width:500px;
+    margin:80px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#333;
+}
+
+h2{
+    color:#444;
+    margin-top:25px;
+}
+
+input[type="url"]{
+    width:70%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+input[type="submit"]{
+    padding:10px 15px;
+    background:#667eea;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{
+    background:#5563d6;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#f1f1f1;
+    padding:8px;
+    margin-top:6px;
+    border-radius:5px;
+}
+
+a{
+    text-decoration:none;
+    color:#667eea;
+    font-weight:bold;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>URL Shortener</h1>
+
+<h2>Stored URLs:</h2>
+
+<ul>
+{% for url in urls %}
+<li>
+<a href="{{ url.short_url }}">{{ url.short_url }}</a>
+</li>
+{% empty %}
+<p>No URLs stored yet.</p>
+{% endfor %}
+</ul>
+
+<h2>Shorten a New URL:</h2>
+
+<form method="post" action="{% url 'shorten_url' %}">
+{% csrf_token %}
+<input type="url" name="long_url" placeholder="Enter your long URL" required>
+<input type="submit" value="Shorten">
+</form>
+
+</div>
+
+</body>
+</html>

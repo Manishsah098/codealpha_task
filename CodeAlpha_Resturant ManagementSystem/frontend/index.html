@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System | Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-utensils"></i>
+                <h2>Manish Restuarant</h2>
+            </div>
+            <nav>
+                <a href="#" class="nav-item active" data-target="dashboard"><i class="fa-solid fa-chart-pie"></i>
+                    Dashboard</a>
+                <a href="#" class="nav-item" data-target="menu"><i class="fa-solid fa-burger"></i> Menu & Order</a>
+                <a href="#" class="nav-item" data-target="admin-orders"><i class="fa-solid fa-clipboard-list"></i> Admin
+                    Orders</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar glass-panel">
+                <h1>Restaurant Dashboard</h1>
+                <div class="user-profile" style="position: relative; cursor: pointer;">
+                    <img id="profile-btn" src="https://ui-avatars.com/api/?name=Admin&background=8b5cf6&color=fff"
+                        alt="Admin">
+                    <!-- Profile Dropdown -->
+                    <div id="profile-dropdown" class="glass-panel"
+                        style="display: none; position: absolute; right: 0; top: 55px; width: 220px; padding: 20px; z-index: 1000; flex-direction: column; gap: 10px; background: rgba(15, 23, 42, 0.95); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+                        <div style="font-weight: 600; font-size: 1.1rem; color: #fff;">System Admin</div>
+                        <div style="font-size: 0.9rem; color: #a0aec0;">admin@rmspro.com</div>
+                        <div style="font-size: 0.85rem; color: #10b981; margin-bottom: 5px;"><i
+                                class="fa-solid fa-circle-check"></i> Active Now</div>
+                        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 5px 0;">
+                        <a href="#"
+                            style="color: #e2e8f0; text-decoration: none; font-size: 1rem; padding: 5px 0; transition: color 0.2s;"><i
+                                class="fa-solid fa-gear" style="width: 20px;"></i> Settings</a>
+                        <a href="#"
+                            style="color: #ef4444; text-decoration: none; font-size: 1rem; padding: 5px 0; transition: color 0.2s;"><i
+                                class="fa-solid fa-right-from-bracket" style="width: 20px;"></i> Logout</a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="page-section active">
+                    <style>
+                        .custom-scroll::-webkit-scrollbar {
+                            width: 8px;
+                        }
+
+                        .custom-scroll::-webkit-scrollbar-track {
+                            background: rgba(255, 255, 255, 0.05);
+                            border-radius: 4px;
+                        }
+
+                        .custom-scroll::-webkit-scrollbar-thumb {
+                            background: rgba(255, 255, 255, 0.2);
+                            border-radius: 4px;
+                        }
+
+                        .custom-scroll::-webkit-scrollbar-thumb:hover {
+                            background: rgba(255, 255, 255, 0.3);
+                        }
+                    </style>
+
+                    <div class="dashboard-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
+                        <div style="display: flex; flex-direction: column; gap: 30px;">
+                            <!-- Project Specs Box -->
+                            <div class="developer-info glass-panel" style="padding: 2.5rem;">
+                                <h2 style="margin-bottom: 1.5rem; color: #a78bfa; font-size: 1.8rem;"><i
+                                        class="fa-solid fa-file-code"></i> Project Specification</h2>
+                                <div class="custom-scroll"
+                                    style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.8; text-align: justify; max-height: 40vh; overflow-y: auto; padding-right: 15px;">
+                                    <p style="margin-bottom: 1.2rem;">
+                                        The <strong>Restaurant Management System (RMS)</strong><br> Running a restaurant is
+                                        more
+                                        than just cooking great food. It involves taking orders accurately, keeping track of
+                                        what's selling, managing ingredients, and making sure every table gets the right
+                                        meal at the right time.
+                                    </p>
+                                    <p style="margin-bottom: 1.2rem;">
+                                        <strong style="color: #fff;">Phase 1: Getting Orders Right, Every Time</strong><br>
+                                        The first step was giving customers a simple, clean way to browse the menu and place
+                                        orders from their table. Instead of a server running back and forth to take down
+                                        orders by hand, customers can view the full menu on a screen, check item ratings,
+                                        and submit their order directly — all tied to their specific table.
+                                    </p>
+                                    <p style="margin-bottom: 1.2rem;">
+                                        <strong style="color: #fff;">Phase 2: Helping the Team Work Smarter< /strong><br>
+                                                Once orders start coming in, the system goes to work for the staff. The
+                                                manager can see daily revenue, total orders placed, and which items are
+                                                performing well — all from one dashboard.
+                                                <strong style="color: #fff;">Phase 3: Built to Grow</strong><br>
+                                                As the restaurant grows, the system grows with it. Future updates will
+                                                support
+                                                multiple branches, give different staff members access only to what they
+                                                need (a
+                                                kitchen cook doesn't need to see sales reports, and a manager doesn't need
+                                                to be in
+                                                the kitchen system), and even predict busy days using sales data.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Developer Details Box -->
+                            <div class="developer-info glass-panel" style="padding: 2.5rem;">
+                                <h2 style="margin-bottom: 1.5rem; color: #60a5fa; font-size: 1.8rem;"><i
+                                        class="fa-solid fa-user-tie"></i> Developer Details</h2>
+                                <div
+                                    style="display: flex; flex-direction: column; gap: 12px; font-size: 1.15rem; color: #e2e8f0; background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px;">
+                                    <div><strong style="color: #fff; display: inline-block; width: 100px;">Name:</strong>
+                                        Manish Kumar Sah</div>
+                                    <div><strong style="color: #fff; display: inline-block; width: 100px;">GitHub
+                                            ID:</strong> Manishsah098</div>
+                                    <div><strong style="color: #fff; display: inline-block; width: 100px;">Email:</strong>
+                                        manishkumarsah.cse2025@citchennai.net</div>
+                                    <div><strong style="color: #fff; display: inline-block; width: 100px;">LinkedIn
+                                            ID:</strong> Manish Kumar Sah </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Restaurant Image Box -->
+                        <div class="glass-panel" style="padding: 10px; border-radius: 20px; overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+                            <img src="img/restaurant_front.jpg" alt="Manish Restaurant" style="width: 100%; height: auto; border-radius: 12px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <div style="padding: 1.5rem; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                                <h2 style="color: #fbd38d; font-family: 'Outfit'; font-size: 1.8rem; margin-bottom: 5px;">Manish Restaurant</h2>
+                                <p style="color: #a0aec0; font-size: 1rem; margin-bottom: 1.5rem;">Est. 1998 • Authentic Indian Tastes</p>
+                                
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                                    <div style="text-align: center;">
+                                        <i class="fa-solid fa-star" style="color: #f6e05e; font-size: 1.2rem; margin-bottom: 8px; filter: drop-shadow(0 0 5px rgba(246, 224, 94, 0.5));"></i>
+                                        <div style="font-size: 1rem; color: #fff; font-weight: 700;">4.8/5</div>
+                                        <div style="font-size: 0.75rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Rating</div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <i class="fa-solid fa-clock" style="color: #60a5fa; font-size: 1.2rem; margin-bottom: 8px; filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.5));"></i>
+                                        <div style="font-size: 1rem; color: #fff; font-weight: 700;">15m</div>
+                                        <div style="font-size: 0.75rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Service</div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <i class="fa-solid fa-award" style="color: #f87171; font-size: 1.2rem; margin-bottom: 8px; filter: drop-shadow(0 0 5px rgba(248, 113, 113, 0.5));"></i>
+                                        <div style="font-size: 1rem; color: #fff; font-weight: 700;">Top 10</div>
+                                        <div style="font-size: 0.75rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Local Choice</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Menu & Order Section -->
+                <section id="menu" class="page-section">
+                    <div class="menu-order-layout">
+                        <div class="menu-container">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; gap: 20px;">
+                                <h2 class="section-title" style="margin-bottom: 0;">Explore Menu</h2>
+                                <div class="search-box glass-panel"
+                                    style="flex: 1; max-width: 300px; padding: 10px 15px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fa-solid fa-magnifying-glass" style="color: #a0aec0;"></i>
+                                    <input type="text" id="menu-search" placeholder="Search dish..."
+                                        style="background: none; border: none; color: white; outline: none; width: 100%; font-size: 0.9rem;">
+                                </div>
+                            </div>
+                            <div class="menu-grid" id="menu-grid">
+                                <!-- Menu cards appended by JS -->
+                            </div>
+                        </div>
+
+                        <div class="cart-container glass-panel">
+                            <h2>Current Order</h2>
+                            <div class="table-selector">
+                                <label for="table-select">Select Table</label>
+                                <select id="table-select">
+                                    <option value="">Choose a table...</option>
+                                    <!-- Populated dynamically -->
+                                </select>
+                            </div>
+
+                            <div class="cart-items" id="cart-items">
+                                <p class="empty-cart-msg text-muted">Your order is empty.</p>
+                                <!-- Cart items appended by JS -->
+                            </div>
+
+                            <div class="cart-summary">
+                                <div class="summary-line font-bold" style="font-size: 1rem; margin-bottom: 5px;">
+                                    <span>Subtotal:</span>
+                                    <span id="cart-subtotal" class="text-muted">₹0.00</span>
+                                </div>
+                                <div class="summary-line font-bold"
+                                    style="font-size: 1rem; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                                    <span>Tax (5%):</span>
+                                    <span id="cart-tax" class="text-muted">₹0.00</span>
+                                </div>
+                                <div class="summary-line font-bold">
+                                    <span>Grand Total:</span>
+                                    <span id="cart-total" class="text-blue">₹0.00</span>
+                                </div>
+                                <button class="btn-primary" id="place-order-btn" disabled>
+                                    Place Order <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <button class="btn-secondary" id="clear-cart-btn"
+                                    style="width: 100%; margin-top: 10px; border-color: rgba(239, 68, 68, 0.3); color: #f87171;">
+                                    <i class="fa-solid fa-trash-can"></i> Clear Items
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Admin Orders Section -->
+                <section id="admin-orders" class="page-section">
+                    <div class="admin-orders-header">
+                        <h2 class="section-title">Live Orders Board</h2>
+                        <button class="btn-secondary" id="refresh-orders-btn">
+                            <i class="fa-solid fa-rotate"></i> Refresh
+                        </button>
+                    </div>
+                    <div id="orders-container" class="orders-grid">
+                        <div class="loading-state">
+                            <i class="fa-solid fa-spinner fa-spin"></i> Loading orders...
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

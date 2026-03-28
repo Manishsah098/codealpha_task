@@ -1,0 +1,16 @@
+<!-- urlshort/templates/urlshort/shorten_url.html --> 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>URL Shortener</title> 
+</head> 
+<body> 
+<h1>Shorten a URL</h1> 
+<form method="post"> 
+{% csrf_token %} 
+<label for="long_url">Enter a long URL:</label> 
+<input type="url" id="long_url" name="long_url" required> 
+<input type="submit" value="Shorten"> 
+</form> 
+</body> 
+</html> 
